@@ -1,0 +1,491 @@
+{
+  "info": {
+    "name": "librarymanagementsystem-auth-service API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "registerUser",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"avatar\": \"String\",\n  \"socialCode\": \"String\",\n  \"password\": \"String\",\n  \"name\": \"String\",\n  \"surname\": \"String\",\n  \"email\": \"String\",\n  \"mobile\": \"String\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{serviceUrl}}//registeruser",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "registeruser"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "updateUser",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"String\",\n  \"surname\": \"String\",\n  \"avatar\": \"String\",\n  \"mobile\": \"String\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{serviceUrl}}//users/:userId",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "users",
+            ":userId"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "deleteUser",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{serviceUrl}}//users/:userId",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "users",
+            ":userId"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "updateUserRole",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"roleId\": \"String\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{serviceUrl}}//userrole/:userId",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "userrole",
+            ":userId"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "updatePassword",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"oldPassword\": \"String\",\n  \"newPassword\": \"String\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{serviceUrl}}//password/:userId",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "password",
+            ":userId"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getUser",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{serviceUrl}}//users/:userId",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "users",
+            ":userId"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "listUsers",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{serviceUrl}}//users",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "createGroup",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"avatar\": \"String\",\n  \"groupName\": \"String\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{serviceUrl}}//group",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "group"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "updateGroup",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"groupName\": \"String\",\n  \"avatar\": \"String\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{serviceUrl}}//group/:userGroupId",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "group",
+            ":userGroupId"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getGroup",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{serviceUrl}}//group/:userGroupId",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "group",
+            ":userGroupId"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "listGroups",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{serviceUrl}}//groups",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "groups"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "createGroupMember",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"groupId\": \"ID\",\n  \"userId\": \"ID\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{serviceUrl}}//groupmember",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "groupmember"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "deleteGroupMember",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{serviceUrl}}//groupmember/:userGroupMemberId",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "groupmember",
+            ":userGroupMemberId"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getGroupMember",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{serviceUrl}}//groupmember/:userGroupMemberId",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "groupmember",
+            ":userGroupMemberId"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "listGroupMembers",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{serviceUrl}}//groupmembers",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "groupmembers"
+          ],
+          "query": [
+            {
+              "key": "groupId",
+              "value": "ID"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
